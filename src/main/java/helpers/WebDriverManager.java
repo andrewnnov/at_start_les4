@@ -20,7 +20,8 @@ public class WebDriverManager {
     public static void initChrome() {
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments(List.of("start-maximized", "--headless"));
+        chromeOptions.addArguments(List.of("start-maximized"));
+        //chromeOptions.addArguments(List.of("start-maximized", "--headless"));
         try {
             currentDriver = new ChromeDriver(chromeOptions);
 
